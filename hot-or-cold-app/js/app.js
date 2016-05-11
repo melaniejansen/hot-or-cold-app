@@ -7,6 +7,8 @@ $(document).ready(function(){
   var guessedNumber;
   var message;
 
+
+
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
     	$(".overlay").fadeIn(1000);
