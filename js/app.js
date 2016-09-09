@@ -6,6 +6,7 @@ $(document).ready(function(){
   var guesses = [];
   var guessedNumber;
   var message;
+  var count = 0;
 
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
@@ -24,7 +25,8 @@ $(document).ready(function(){
 		answer = Math.floor((Math.random() * 100) + 1);
 		$('#guessList').empty();
 		$('#feedback').html('Make your guess!');
-		$('#count').html('0');
+    count = 0;
+		$('#count').text(count);
 		guesses = [];
 	});
 
@@ -35,6 +37,8 @@ $(document).ready(function(){
       $("#guessList").append("<li>" + guess + "</li>");
       console.log('Guess = ' + guess);
       guessedNumber = Math.abs(guess - randomNumber);
+      count++;
+      $('#count').text(count);
 
 
 // If a number greater than 100 is entered
